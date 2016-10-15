@@ -26,7 +26,7 @@ Route::get('/page/{slug}', 'FrontEnd\PagesController@show');
 Route::group(['middleware' => ['web', 'auth']], function ($router) {
     $router->group(['prefix' => Config::get('copya.admin_path'), 'namespace' => 'Admin',], function($router){
         $router->get('/', function(){
-            return redirect()->route('dashboard');
+            return view('copya.admin.admin');
         });
         $router->get('/dashboard', 'UsersController@index')->name('dashboard');
 

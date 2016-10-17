@@ -1,5 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <ui-view></ui-view>
+    <ui-view>
+        <i>Some content will load here!</i>
+    </ui-view>
 @endsection

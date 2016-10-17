@@ -1,6 +1,19 @@
-routing.$inject = ['$urlRouterProvider', '$locationProvider'];
 
-export default function routing($urlRouterProvider, $locationProvider) {
-    $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise('/');
+routes.$inject = ['$stateProvider'];
+
+export default function routes($stateProvider) {
+    $stateProvider
+        .state('admin', {
+            url: '/',
+            templateUrl: './../templates/dashboard.html',
+            controller: 'DashboardController',
+            controllerAs: 'home'
+        })
+        .state('dashboard', {
+            url: '/dashboard',
+            templateUrl: './../templates/dashboard.html',
+            controller: 'DashboardController',
+            controllerAs: 'dashboard'
+        })
+    ;
 }

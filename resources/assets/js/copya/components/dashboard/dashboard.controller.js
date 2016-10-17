@@ -1,3 +1,5 @@
+
+/*
 export default class DashboardController {
     constructor() {
         this.name = 'World';
@@ -7,4 +9,9 @@ export default class DashboardController {
     changeName() {
         this.name = 'angular-tips';
     }
+}*/
+
+
+export default function DashboardController(){
+    console.log('test');
 }

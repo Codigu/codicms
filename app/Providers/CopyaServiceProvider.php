@@ -48,7 +48,7 @@ class CopyaServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../../resources/assets/js' => base_path('resources/assets/js'),
-        ], 'copya-vue');
+        ], 'copya-scripts');
 
         /*$this->app->booted(function () {
 
